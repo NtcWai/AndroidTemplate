@@ -1,5 +1,5 @@
-# Setel Mcommerce
-This application is to show the list of restaurants and their hours of opening.
+#
+This repo to try something new on android development
 
 ## Features
 
@@ -12,14 +12,5 @@ This application is to show the list of restaurants and their hours of opening.
 
 ## Build instructions
 
-To clone the Git repository to your local machine: 
-```
-$ git clone https://bitbucket.org/vmodev/s2ecom-android.git
-``` 
 
 ## Documentation
-
-Test report:
-
-## Copyright & License
-Copyright (c) 2020 VMO JSC. All rights reserved.
