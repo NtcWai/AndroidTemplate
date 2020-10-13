@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="padding_edge">@dimen/_12sdp</dimen>
+    <dimen name="padding_edge_half">@dimen/_6sdp</dimen>
+    <dimen name="thumb_size">@dimen/_86sdp</dimen>
+    <dimen name="ic_status_size">@dimen/_8sdp</dimen>
+    <dimen name="avatar_size">@dimen/_40sdp</dimen>
+</resources>

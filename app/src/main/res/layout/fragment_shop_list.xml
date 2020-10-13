@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvAccName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/acc_name"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/padding_edge"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintStart_toStartOf="@id/tvAccName"
+        app:layout_constraintTop_toBottomOf="@id/tvAccName"
+        />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="@dimen/avatar_size"
+        android:layout_height="@dimen/avatar_size"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvAccName"
+        app:layout_constraintBottom_toBottomOf="@id/tvWelcome"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/CircleImageView"
+        app:srcCompat="@drawable/ic_avatar"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/shopRecycler"
+            android:name="com.vmo.ecom.presentation.ui.shop.list.ShopListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_edge"
+            android:layout_marginRight="@dimen/padding_edge"
+            app:layoutManager="LinearLayoutManager"
+            tools:context=".presentation.ui.shop.list.ShopListFragment"
+            tools:listitem="@layout/item_shop_list" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

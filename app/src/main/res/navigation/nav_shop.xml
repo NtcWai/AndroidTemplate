@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_shop"
+    app:startDestination="@id/shopListFragment"
+    >
+
+    <fragment
+        android:id="@+id/shopListFragment"
+        android:name="com.vmo.ecom.presentation.ui.shop.list.ShopListFragment"
+        tools:layout="@layout/fragment_shop_list">
+        <action
+            android:id="@+id/action_to_detail"
+            app:destination="@id/shopDetailFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/shopDetailFragment"
+        android:name="com.vmo.ecom.presentation.ui.shop.detail.ShopDetailFragment"
+        tools:layout="@layout/fragment_shop_detail">
+        <argument
+            android:name="shopDetail"
+            app:argType="com.vmo.ecom.domain.model.ShopDomain"/>
+    </fragment>
+
+</navigation>
